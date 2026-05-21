@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>habit tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <header class="app-header">
+    <h1>☐ habit tracker</h1>
+    <p class="tagline">pick a habit. stick to it.</p>
+  </header>
+
+  <!-- empty state -->
+  <section id="empty-state">
+    <div class="empty-icon">○</div>
+    <h2>nothing here yet</h2>
+    <p>add your first habit and start tracking.</p>
+  </section>
+
+  <!-- week navigation -->
+  <nav id="week-nav" class="hidden" aria-label="Week navigation">
+    <button id="prev-btn" aria-label="Previous week">‹</button>
+    <span id="week-label"></span>
+    <button id="next-btn" aria-label="Next week">›</button>
+    <button id="today-btn" class="btn-today">today</button>
+  </nav>
+
+  <!-- tracker grid -->
+  <section id="tracker" class="hidden" aria-label="Habit tracker grid">
+    <div id="grid-header" role="row" class="grid-row grid-header"></div>
+    <div id="grid-body" role="list"></div>
+  </section>
+
+  <!-- add habit form -->
+  <form id="add-form" class="add-form">
+    <input type="text" id="habit-input" placeholder="e.g. read 30 min, exercise..." maxlength="60" autocomplete="off">
+    <button type="submit" id="add-btn">+ Add</button>
+  </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
